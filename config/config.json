@@ -1,8 +1,10 @@
+require("dotenv").config();
+
 {
   "development": {
     "username": "root",
-    "password": "Section8",
-    "database": "exampledb",
+    "password": "password",
+    "database": "wearItWell",
     "host": "localhost",
     "dialect": "mysql"
   },
