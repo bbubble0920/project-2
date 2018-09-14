@@ -1,5 +1,31 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+DROP DATABASE IF EXISTS wearItWell;
+CREATE DATABASE wearItWell;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+USE wearItWell;
+
+CREATE TABLE desingerInfo (
+id INT AUTO_INCREMENT NOT NULL, 
+name VARCHAR(255) NOT NULL, 
+password VARCHAR(255) NOT NULL, 
+brandName VARCHAR(255) NOT NULL, 
+bio VARCHAR(255) NOT NULL,
+email VARCHAR (255) NOT NULL,
+phoneNumber INT (10) NOT NULL,
+PRIMARY KEY (id)
+
+); 
+
+
+CREATE TABLE designs (
+id INT  NOT NULL, 
+design LONGBLOB NOT NULL
+
+);
+
+
+CREATE TABLE visitors (
+id INT  NOT NULL, 
+email VARCHAR (255) NOT NULL,
+designLiked INT (10) NOT NULL
+
+);
