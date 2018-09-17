@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Latest compiled and minified CSS & JS -->
     <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Register</title>
@@ -13,10 +14,10 @@
 <body>
     <nav style="margin-bottom: 10%">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">Logo</a>
+          <a href="main.html" class="brand-logo center">Logo</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="sass.html">Log In</a></li>
-            <li><a href="badges.html">Register</a></li>
+            <li><a href="register.html">Register</a></li>
           </ul>
         </div>
       </nav>
@@ -25,29 +26,47 @@
         <h3>Register Here!</h3>
 
         <form>
-            <label for="firstName">First Name</label>
+            <label for="firstName" class="formText">First Name</label>
+            <br>
             <input type="text" id="firstName">
 
-            <label for="lastName">Last Name</label>
+            <br><br>
+
+            <label for="lastName" class="formText">Last Name</label>
+            <br>
             <input type="text" id="lastName">
 
-            <label for="emailAddress">Email Address</label>
+            <br><br>
+
+            <label for="emailAddress" class="formText">Email Address</label>
+            <br>
             <input type="text" id="emailAddress">
 
-            <label for="password">Password</label>
+            <br><br>
+
+            <label for="password" class="formText">Password</label>
+            <br>
             <input type="text" id="password">
 
-            <label for="phoneNumber">Phone Number</label>
-            <input type="number" id="phoneNumber">
+            <br><br>
 
-            <label>Profile Image</label>
+            <label for="phoneNumber" class="formText">Phone Number</label>
+            <br>
+            <input type="text" id="phoneNumber">
 
-            <label for="">Designer Biography</label>
+            <br><br>
+
+            <label for="designerBio" class="formText">Designer Biography</label>
+            <br><br>
             <textarea id="biography" style="height:200px"></textarea>
 
-            <label>Portfolios</label>
+            <br><br>
 
-            <input type="submit" value="Submit">
+            <label for="portfolioImage" class="formText">Portfolios (Upload at least one image)</label>
+
+            <br><br><br>
+
+            <input type="submit" id="submit-button" value="Submit">
 
         </form>
     </div>
