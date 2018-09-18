@@ -1,0 +1,269 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Wear it Well</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+    <link rel="stylesheet" href="../../public/styles/reset.css">
+    <link rel="stylesheet" href="../../public/styles/artistpage.css">
+  </head>
+  
+
+
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <nav style="margin-bottom: 10%">
+    <ul id="slide-out" class="sidenav">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="../../public/images/background2.jpg">
+        </div>
+          <a href="#!user"><img class="circle" src="../../public/images/profile1.jpg"></a>
+          <a href="#!name"><span class="white-text name">John Doe</span></a>
+          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div>
+      </li>
+      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+      <li><a href="#!">Second Link</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </nav>
+   
+    
+    
+    <script>
+    		$(document).ready(function(){
+           $('.sidenav').sidenav();
+
+    		})
+    </script>
+
+    <div class="row artist">
+        <div class="row">
+            <div class="col s3">
+                <img class = "artistprofile" src="profilepic.jpg" alt="profile pic">
+            </div>
+            <div class="col s3">
+                <h2>Artist Name</h2>
+                <h3>artist@gmail.com</h3>
+            </div>
+            <div class="col s3 offset-s3">
+                <a class="waves-effect waves-light btn-large">Button</a>
+            </div>
+        </div>
+        <div class="row artistdesc">
+            <div class="col s12">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quam id error, quaerat laudantium odit impedit libero eum dolor quibusdam! Necessitatibus fuga expedita quasi nostrum quaerat labore? Reprehenderit laborum distinctio voluptate quasi natus nostrum iure? Nam quae sapiente doloribus placeat deserunt deleniti laborum, dolores cupiditate, dolor possimus in pariatur ducimus?</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s3 offset-s1">
+                <h3>Followers</h3>
+            </div>
+            <div class="col s3 offset-s1">
+                <h3>Following</h3>
+            </div>
+            <div class="col s3 offset-s1">
+                <h3>Items Shipped</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col s6">
+          <div class="card large">
+  
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="../../public/images/img1.jpg">
+              <span class="card-title activator grey-text text-darken-4">Card Title</span>
+            </div>
+  
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+            </div>
+  
+            <div class="card-action grey-text center">
+              <!-- Need to make this dynamic, find a way to change the content (from favorite_border to favorite), need to read from database for the counter-->
+              <i class="material-icons">
+                favorite_border
+              </i>0
+              <p class="center">Andre Small</p>
+            </div>
+  
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+            </div>
+          </div>
+  
+        </div>
+  
+  
+        <div class="col s6">
+          <div class="card large">
+  
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="../../public/images/img2.jpg">
+              <span class="card-title activator grey-text text-darken-4">Card Title</span>
+            </div>
+  
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+            </div>
+  
+            <div class="card-action grey-text center">
+              <!-- Need to make this dynamic, find a way to change the content-->
+              <i class="material-icons">
+                favorite_border
+              </i>0
+              <p class="center">Andre Small</p>
+            </div>
+  
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col s6">
+          <div class="card large">
+  
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="../../public/images/img3.jpg">
+              <span class="card-title activator grey-text text-darken-4">Card Title</span>
+            </div>
+  
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+            </div>
+  
+            <div class="card-action grey-text center">
+              <!-- Need to make this dynamic, find a way to change the content-->
+              <i class="material-icons">
+                favorite_border
+              </i>0
+              <p class="center">Andre Small</p>
+            </div>
+  
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+            </div>
+          </div>
+  
+        </div>
+  
+  
+        <div class="col s6">
+          <div class="card large">
+  
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="../../public/images/img4.jpg">
+              <span class="card-title activator grey-text text-darken-4">Card Title</span>
+            </div>
+  
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+            </div>
+  
+            <div class="card-action grey-text center">
+              <!-- Need to make this dynamic, find a way to change the content-->
+              <i class="material-icons">
+                favorite_border
+              </i>0
+              <p class="center">Andre Small</p>
+            </div>
+  
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+            </div>
+          </div>
+  
+        </div>
+  
+        <div class="row">
+          <div class="col s6">
+            <div class="card large">
+  
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="../../public/images/img1.jpg">
+                <span class="card-title activator grey-text text-darken-4">Card Title</span>
+              </div>
+  
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+                <p><a href="#">This is a link</a></p>
+              </div>
+  
+              <div class="card-action grey-text center">
+                <!-- Need to make this dynamic, find a way to change the content-->
+                <i class="material-icons">
+                  favorite_border
+                </i>0
+                <p class="center">Andre Small</p>
+              </div>
+  
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col s6">
+            <div class="card large">
+  
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="../../public/images/img2.jpg">
+                <span class="card-title activator grey-text text-darken-4">Card Title</span>
+              </div>
+  
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+                <p><a href="#">This is a link</a></p>
+              </div>
+  
+              <div class="card-action grey-text center">
+                <!-- Need to make this dynamic, find a way to change the content-->
+                <i class="material-icons">
+                  favorite_border
+                </i>0
+                <p class="center">Andre Small</p>
+              </div>
+  
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+        <div class="row footer">
+            <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                  </div>
+                </div>
+              </form>
+        </div>
+       
+        
+  </body>
+  </html>
