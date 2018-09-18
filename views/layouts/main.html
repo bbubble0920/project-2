@@ -11,28 +11,33 @@
   <link rel="stylesheet" type="text/css" href="../../public/styles/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="../../public/js/likeButton.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
 </head>
 
 
 <body>
-  <nav style="margin-bottom: 10%">
-    <div class="nav-wrapper">
-      <a href="./main.html"><img src="../../public/images/wearitwell.png" style="width:60px; justify-content: center;"></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html"></a></li>
-        <li><a href="badges.html"></a></li>
-        <li><a href="collapsible.html"></a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav style="margin-bottom: 10%">
+        <div class="nav-wrapper">
+            <a href="./main.html"><img src="../../public/images/wearitwell.png" class="brand-logo center" style="width:120px; justify-content: center;"></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Log In</a></li>
+            <li><a href="../../register.html">Register</a></li>
+            <li><a href="collapsible.html"></a></li>
+          </ul>
+        </div>
+      </nav>
 
+  <script>
+    AOS.init();
+  </script>
 
   <div class="container">
 
     <div class="row">
       <div class="col s6">
-        <div class="card large">
+        <div data-aos="zoom-in"  class="card large">
 
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="../../public/images/img1.jpg">
@@ -61,7 +66,7 @@
 
 
       <div class="col s6">
-        <div class="card large">
+        <div data-aos="zoom-in" class="card large" >
 
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="../../public/images/img2.jpg">
@@ -91,7 +96,7 @@
 
     <div class="row">
       <div class="col s6">
-        <div class="card large">
+        <div data-aos="zoom-in" class= "card large" >
 
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="../../public/images/img3.jpg">
@@ -120,7 +125,7 @@
 
 
       <div class="col s6">
-        <div class="card large">
+        <div data-aos="zoom-in" class= "card large">
 
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="../../public/images/img4.jpg">
@@ -149,7 +154,7 @@
 
       <div class="row">
         <div class="col s6">
-          <div class="card large">
+          <div data-aos="zoom-in" class="card large">
 
             <div class="card-image waves-effect waves-block waves-light">
               <img class="activator" src="../../public/images/img1.jpg">
@@ -176,7 +181,7 @@
         </div>
 
         <div class="col s6">
-          <div class="card large">
+          <div data-aos="zoom-in" class="card large">
 
             <div class="card-image waves-effect waves-block waves-light">
               <img class="activator" src="../../public/images/img2.jpg">
