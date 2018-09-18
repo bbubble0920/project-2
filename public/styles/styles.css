@@ -5,10 +5,55 @@ body {
   background-size: 100% 100%;
   font-family: 'Roboto';
   color: #fff;
-
 }
 
+/* Register Page Style */
 
+form {
+  border-style: solid;
+  border-color: #9E9E9E;
+  padding: 6%;
+}
+
+.loginContainer {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 20%;
+}
+
+.registerContainer {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 20%;
+}
+
+h3 {
+  font-family: 'Roboto';
+  color: #FF5722;
+  padding-bottom: 30px;
+}
+
+.formText {
+  font-size: 17px;
+}
+
+#firstName, #lastName {
+  width: 200px;
+}
+
+#emailAddress, #password, #phoneNumber, #brandName {
+  width: 350px;
+}
+
+#submit-button {
+  font-family: 'Roboto';
+  color: #fff;
+  background-color: #FF5722;
+  padding: 10px;
+  position: absolute;
+  right: 20%;
+}
+/*-------------- Materialize CSS --------------*/
 
 .fabs {
   bottom: 0;
