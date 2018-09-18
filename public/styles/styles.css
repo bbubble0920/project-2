@@ -41,7 +41,7 @@ h3 {
   width: 200px;
 }
 
-#emailAddress, #password, #phoneNumber {
+#emailAddress, #password, #phoneNumber, #brandName {
   width: 350px;
 }
 
