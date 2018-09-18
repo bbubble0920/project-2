@@ -15,6 +15,12 @@ form {
   padding: 6%;
 }
 
+.loginContainer {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 20%;
+}
+
 .registerContainer {
   padding-left: 15%;
   padding-right: 15%;
