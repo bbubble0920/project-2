@@ -10,18 +10,19 @@ module.exports = function (sequelize, DataTypes) {
       autoIncrement: true,
       primaryKey: true
     },
-    name: DataTypes.STRING,
+    firstName: DataTypes.STRING,
+    lastName: DataTypes.STRING,
     username: DataTypes.STRING,
-    password: DataTypes.STRING,
-    password2: DataTypes.STRING,
-    email: {
+    emailAddress: {
       type: DataTypes.STRING,
       validate: {
         isEmail: true
       },
     },
     phoneNumber: DataTypes.INTEGER,
-    brandName: DataTypes.STRING,
+    password: DataTypes.STRING,
+    password2: DataTypes.STRING,
+    brandName : DataTypes.STRING,
     bio: DataTypes.TEXT,
   }, {
     freezeTableName: true // Model tableName will be the same as the model
@@ -46,10 +47,10 @@ module.exports = function (sequelize, DataTypes) {
       firstName: "Anonymous",
       lastName: "Doe",
       username: "Andy",
+      emailAddress: "example@gmail.com",
+      phoneNumber: 7371111,
       password: "1",
       password2: "1",
-      email: "example@gmail.com",
-      phoneNumber: 7371111,
       brandName: "Nike",
       bio: "Here is all you need to know about me."
     }).catch(function (err) {
