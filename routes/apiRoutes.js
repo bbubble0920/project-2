@@ -71,12 +71,22 @@ router.get("/login",
   });
 
 // ================
-// Serve Login Page
+// Arist  Page
 // ================
 router.get("/artistpage",
   // passport.authenticate('local'),
   function (req, res) {
     res.render("artistpage");
+  });
+
+
+// ================
+// Main Page
+// ================
+router.get("/index",
+  // passport.authenticate('local'),
+  function (req, res) {
+    res.render("index");
   });
 
 
@@ -87,7 +97,7 @@ router.get("/artistpage",
 router.post("/login",
   passport.authenticate("local", {
     successRedirect: "/index",
-    failureRedirect: "/example"
+    failureRedirect: "/login"
   }));
 
 

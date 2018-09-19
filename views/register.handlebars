@@ -1,27 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Latest compiled and minified CSS & JS -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="../public/styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <title>Register</title>
-</head>
-<body>
-    <nav style="margin-bottom: 10%">
-        <div class="nav-wrapper">
-          <a href="main.html" class="brand-logo center">Logo</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="login.html">Log In</a></li>
-            <li><a href="register.handlebars">Register</a></li>
-          </ul>
-        </div>
-      </nav>
+
+
     
     {{#if errors}}
     {{#each errors}}
@@ -37,43 +15,43 @@
         <form>
             <label for="firstName" class="formText">First Name</label>
             <br>
-            <input type="text" id="firstName">
+            <input type="text" id="firstName" name="firstName">
 
             <br><br>
 
             <label for="lastName" class="formText">Last Name</label>
             <br>
-            <input type="text" id="lastName">
+            <input type="text" id="lastName" name="lastName">
 
             <br><br>
 
             <label for="emailAddress" class="formText">Email Address</label>
             <br>
-            <input type="text" id="emailAddress">
+            <input type="text" id="emailAddress" name="emailAddress">
 
             <br><br>
 
             <label for="password" class="formText">Password</label>
             <br>
-            <input type="text" id="password">
+            <input type="text" id="password" name="password">
 
             <br><br>
 
             <label for="phoneNumber" class="formText">Phone Number</label>
             <br>
-            <input type="text" id="phoneNumber">
+            <input type="text" id="phoneNumber" name="phoneNumber">
 
             <br><br>
 
             <label for="brandName" class="formText">Brand Name</label>
             <br>
-            <input type="text" id="brandName">
+            <input type="text" id="brandName" name="brandName">
 
             <br><br><br>
 
             <label for="designerBio" class="formText">Designer Biography</label>
             <br><br>
-            <textarea id="biography" style="height:200px"></textarea>
+            <textarea id="designerBio" name="designerBio" style="height:200px"></textarea>
 
             <br><br>
 
@@ -100,19 +78,6 @@
         </form>
 
 
-<!-- <form method="post" enctype="multipart/form-data" action="/upload">
-    <p>
-        <input type="text" name="title" placeholder="optional title"/>
-    </p>
-
-    <p>
-        <input type="file" name="upl"/>
-    </p>
-
-    <p>
-        <input type="submit" value="Upload"/>
-    </p>
-</form> -->
     </div>
 
     <div class="row footer">
@@ -126,5 +91,3 @@
             </div>
           </form>
     </div>
-</body>
-</html>
