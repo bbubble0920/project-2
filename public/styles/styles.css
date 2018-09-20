@@ -254,3 +254,14 @@ body {
   background-color: #29b6f6;
   color: white;
 } 
+
+/* Like Button */
+
+.likeButton{
+  cursor: pointer;
+}
+
+/* nav text-deco */
+.nav-wrapper{
+  text-decoration: none;
+}
