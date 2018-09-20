@@ -38,7 +38,7 @@ app.use(session({
   resave: true
 })); 
 
-var syncOptions = { force: false };
+// var syncOptions = { force: false };
 
 
 // ======================
@@ -81,7 +81,7 @@ app.use("/", routes);
 app.use("/apiRoutes", apiRoutes); 
 
 
-// Starting the server, syncing our models ------------------------------------/
+// Starting the server, ------------------------------------/
 app.listen(PORT, function() {
   console.log("\nApp listening on PORT " + PORT);
 });

@@ -42,6 +42,17 @@ passport.deserializeUser(function (user, done) {
 // ==================
 
 
+// ================
+// Serve Main Page
+// ================
+router.get("/",
+  // passport.authenticate('local'),
+  function (req, res) {
+    console.log("Error retrieving main page");
+    res.render("index");
+  });
+
+
 // ========================
 // Serve Register User Page
 // ========================
@@ -51,15 +62,13 @@ router.get("/register", function (req, res) {
 
 
 // ================
-// Serve Login Page
+// Arist  Page
 // ================
-router.get("/",
-  // passport.authenticate('local'),
-  function (req, res) {
-    console.log("Error retrieving main page");
-    res.render("register");
+router.get("/artistpage",
+// passport.authenticate("local-passport"),
+function (req, res) {
+    res.render("artistpage");
   });
-
 
 // ================
 // Serve Login Page
@@ -70,34 +79,13 @@ router.get("/login",
     res.render("login");
   });
 
-// ================
-// Arist  Page
-// ================
-router.get("/artistpage",
-  // passport.authenticate('local'),
-  function (req, res) {
-    res.render("artistpage");
-  });
-
-
-// ================
-// Main Page
-// ================
-router.get("/index",
-  // passport.authenticate('local'),
-  function (req, res) {
-    res.render("index");
-  });
-
-
-
 // ======================
-// POST user information
+// Login Authentication
 // ======================
 router.post("/login",
   passport.authenticate("local", {
-    successRedirect: "/index",
-    failureRedirect: "/login"
+    successRedirect: "/apiRoutes/artistpage",
+    failureRedirect: "/apiRoutes/login"
   }));
 
 
@@ -142,6 +130,7 @@ router.post("/register", function (req, res) {
   req.checkBody("password", "Password is required.").notEmpty();
   req.checkBody("password2", "Passwords do not match.").equals(req.body.password);
   req.checkBody("phoneNumber", "Phone is required.").notEmpty();
+  req.checkBody("brandName", "Phone is required.").notEmpty();
   req.checkBody("designerBio", "Bio is required.").notEmpty();
 
   var errors = req.validationErrors();
@@ -161,11 +150,12 @@ router.post("/register", function (req, res) {
       password: req.body.password,
       password2: req.body.password2,
       phoneNumber: req.body.phoneNumber,
+      brandName: req.body.brandName,
       designerBio: req.body.designerBio
     }).then(function () {
       // res.json(result);
-      req.flash("successMsg", "You are registered and can now login.");
-      res.redirect("/main");
+      req.flash("success_msg", "You are registered and can now login.");
+      res.redirect("/apiRoutes/login");
       console.log("PASSED");
 
     }).catch(function (err) {
