@@ -2,7 +2,7 @@ module.exports = function (sequelize, DataTypes) {
 
   var Sequelize = require("sequelize");
   var sequelize = require("../config/connection.js");
-  // var bcrypt = require("bcryptjs");
+  var bcrypt = require("bcryptjs");
 
   var Designer = sequelize.define("Designer", {
     id: {

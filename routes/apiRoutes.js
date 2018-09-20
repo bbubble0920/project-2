@@ -45,12 +45,12 @@ passport.deserializeUser(function (user, done) {
 // ================
 // Serve Main Page
 // ================
-router.get("/",
-  // passport.authenticate('local'),
-  function (req, res) {
-    console.log("Error retrieving main page");
-    res.render("index");
-  });
+// router.get("/",
+//   // passport.authenticate('local'),
+//   function (req, res) {
+//     console.log("Error retrieving main page");
+//     res.render("index");
+//   });
 
 
 // ========================
@@ -173,7 +173,7 @@ router.post("/register", function (req, res) {
 
 passport.use(new LocalStrategy(
   function (username, password, done) {
-      db.User.findOne({
+      db.Designer.findOne({
           where: {
               username: username
           }
