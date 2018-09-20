@@ -6,10 +6,12 @@
 {{/each}}
 {{/if}}
 
+
+
 <div class="registerContainer">
     <h3>Register Here!</h3>
 
-    <form>
+<form method="post" action="/apiRoutes/register">
         <label for="firstName" class="formText">First Name</label>
         <br>
         <input type="text" id="firstName" name="firstName">
