@@ -38,13 +38,37 @@
 
 
 h3 {
-  font-family: 'Roboto' !;
-  color: #FF5722;
-
+  font-family: 'Roboto';
+  color: #FF5722 !important;
+  font-size: 40px !important;
 }
 
-
-
+.registerContainer {
+  padding-right: 15%;
+  padding-left: 15%;
+  padding-bottom: 5%;
+  padding-top: 0;
+}
+form {
+  border: solid;
+  border-color: #FF5722;
+  padding: 2%;
+}
+.formText {
+  font-size: 20px;
+}
+#firstName, #lastName, #userName, #phoneNumber, #password, #password2, #brandName {
+  width: 200px;
+}
+#emailAddress {
+  width: 400px;
+}
+#submit-button {
+  padding: 10px;
+  font-size: 15px;
+  background-color: #FF5722;
+  color: white;
+}
 
 /* Share Button */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic);
