@@ -261,7 +261,9 @@ body {
   cursor: pointer;
 }
 
-/* nav text-deco */
-.nav-wrapper{
-  text-decoration: none;
+/* nav hyperlink removal */
+.nav-wrapper a:hover
+{
+    text-decoration: none;
+    color: white;
 }
