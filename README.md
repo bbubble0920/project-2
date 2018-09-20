@@ -13,9 +13,11 @@ This is an online/mobile platform for designers to publish their original, work-
     - Javascript
     - Node and Express Web Server
     - MySQL Database with a Sequelize ORM
-    - Heroku
+    - Passport.js
     - Amazon S3
     - Twillo API
+    - Mocha
+    - Chai
 
 <p align="center">
   <a href="http://materializecss.com/">
