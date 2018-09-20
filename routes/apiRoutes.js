@@ -1,7 +1,7 @@
 // Dependencies
 var express = require("express");
 var router = express.Router();
-
+var path = require("path");
 // PassportJS
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
@@ -70,6 +70,23 @@ function (req, res) {
     res.render("artistpage");
   });
 
+  router.get("/artistpage/andy",
+// passport.authenticate("local-passport"),
+function (req, res) {
+  res.sendFile(path.join(__dirname, "../views", "artistpage.html"));
+  });
+
+  router.get("/uploaded",
+// passport.authenticate("local-passport"),
+function (req, res) {
+    res.render("uploaded");
+  });
+
+  router.get("/artistUpdate",
+// passport.authenticate("local-passport"),
+function (req, res) {
+  res.sendFile(path.join(__dirname, "../views", "artistpage.html"));
+  });
 // ================
 // Serve Login Page
 // ================

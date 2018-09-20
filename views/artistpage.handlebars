@@ -1,102 +1,39 @@
+<script>
+  $(document).ready(function () {
+    $('.sidenav').sidenav();
+  })
+</script>
 
-   
-    <script>
-            $(document).ready(function(){
-           $('.sidenav').sidenav();
-            })
-    </script>
+<div class="container">
+  <div class="row artist">
 
-  <div class="container">
-    <div class="row artist">
-        <div class="row">
-          <div class="col s12">
-            <h2>Artist Name</h2>
-          </div>
-          <div class="col s12">
-            <h4>artist@gmail.com</h4>
-          </div>
-          <div class="col s12">
-                <h5>Followers</h5>
-            </div>
-            <div class="col s12">
-                <h5>Following</h5>
-            </div>
-            <div class="col s12">
-                <h5>Items Shipped</h5>
-            </div>
-        </div>
-        <div class="row artistdesc">
-            <div class="col s1">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quam id error, quaerat laudantium odit impedit libero eum dolor quibusdam! Necessitatibus fuga expedita quasi nostrum quaerat labore? Reprehenderit laborum distinctio voluptate quasi natus nostrum iure? Nam quae sapiente doloribus placeat deserunt deleniti laborum, dolores cupiditate, dolor possimus in pariatur ducimus?</p>
-            </div>
-        </div>
-    </div>
- <!-- ATTN: Revmoved form here and linked new route -->
-    <div class="row">
-      <p>Add designs to your portfolio.</p>
-      <br>
-      <a href='/artistUpdate'> I'm ready</a>
-
+    <div class="col s12">
+      <h2>Andy</h2>
     </div>
 
-    <div class="row">
-        <div class="col s6">
-          <div class="card large">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="/images/img1.jpg">
-              <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            </div>
-  
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
-              <p><a href="#">This is a link</a></p>
-            </div>
-  
-            <div class="card-action grey-text center">
-              <!-- Need to make this dynamic, find a way to change the content (from favorite_border to favorite), need to read from database for the counter-->
-              <i class="material-icons">
-                favorite_border
-              </i>
-              <p class="center">Andre Small</p>
-            </div>
-  
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col s6">
+    <div class="col s12">
+      <h4>andy@utoronto.ca</h4>
+    </div>
 
-          <div class="card large">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="/images/img2.jpg">
-              <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            </div>
-
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
-              <p><a href="#">This is a link</a></p>
-            </div>
-  
-            <div class="card-action grey-text center">
-              <!-- Need to make this dynamic, find a way to change the content-->
-              <i class="material-icons">
-                favorite_border
-              </i>
-              <p class="center">Andre Small</p>
-            </div>
-  
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-            </div>
-          </div>
-  
-        </div>
-      </div>
-  
-    
-  
-  
-       
   </div>
+
+  <div class="row">
+    <div class="col s1">
+      <p>I'm Andy!</p>
+    </div>
+  </div>
+
+  <!-- ATTN: Revmoved form here and linked new route -->
+  <div class="row">
+    <p>Add designs to your portfolio.</p>
+    <br>
+    <a href='/apiRoutes/artistUpdate'> I'm ready</a>
+
+  </div>
+
+
+</div>
+
+
+
+
