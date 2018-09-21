@@ -2,6 +2,10 @@
 var express = require("express");
 var router = express.Router();
 var path = require("path");
+var aws = require("aws-sdk");
+var multer = require("multer");
+var multerS3 = require("multer-s3");
+
 // PassportJS
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
@@ -15,6 +19,16 @@ var email;
 var username;
 var password;
 var password2;
+
+
+//aws setup
+aws.config.update({
+  secretAccessKey: process.env.SECRET_ACCESS_KEY,
+  accessKeyId: process.env.ACCESS_KEY_ID,
+  region: 'us-east-1'
+});
+// Create an instance of the express and aws-s3 app.
+var s3 = new aws.S3();
 
 // ============================================
 // Sessions: Creating Cookies and Reading Them
@@ -60,33 +74,72 @@ router.get("/register", function (req, res) {
   res.render("register");
 });
 
+router.get("/artistpage", function(req, res) {
+  //console.log(req);
+  res.render("artistpage");    
+});
 
+router.get("/artistUpdate", function (req, res) {
+  res.sendFile(path.join(__dirname, "../views/artistpage.html"));
+});
+
+//======================================================================
+var fileFilter = (req, file, cb) => {
+  if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+      cb(null, true);
+  } else {
+      cb(new Error('Invalid file type, only JPEG and/or PNG is allowed!'), false);
+  }
+};
+
+//app.use(bodyparser.json());
+
+var upload = multer({
+  fileFilter,
+  storage: multerS3({
+      s3: s3,
+      bucket: process.env.BUCKET,
+      acl: 'public-read',
+      contentType: function (req, file, cb){
+          cb(null, file.mimetype);
+       }, //'image/png',
+      key: function (req, file, cb) {
+          console.log(file);
+          cb(null, file.originalname); //use Date.now() for unique file keys
+      }
+  })
+});
+
+router.post('/upload', upload.array('upl',1), function (req, res, next) {
+  //res.send("Uploaded!");
+  res.render("uploaded");
+});
 // ================
-// Arist  Page
+// Artist  Page
 // ================
-router.get("/artistpage",
-// passport.authenticate("local-passport"),
-function (req, res) {
-    res.render("artistpage");
-  });
+// router.get("/artistpage",
+// // passport.authenticate("local-passport"),
+// function (req, res) {
+//     res.render("artistpage");
+//   });
 
-  router.get("/artistpage/andy",
-// passport.authenticate("local-passport"),
-function (req, res) {
-  res.sendFile(path.join(__dirname, "../views", "artistpage.html"));
-  });
+//   router.get("/artistpage/andy",
+// // passport.authenticate("local-passport"),
+// function (req, res) {
+//   res.sendFile(path.join(__dirname, "../views", "artistpage.html"));
+//   });
 
-  router.get("/uploaded",
-// passport.authenticate("local-passport"),
-function (req, res) {
-    res.render("uploaded");
-  });
+//   router.get("/uploaded",
+// // passport.authenticate("local-passport"),
+// function (req, res) {
+//     res.render("uploaded");
+//   });
 
-  router.get("/artistUpdate",
-// passport.authenticate("local-passport"),
-function (req, res) {
-  res.sendFile(path.join(__dirname, "../views", "artistpage.html"));
-  });
+//   router.get("/artistUpdate",
+// // passport.authenticate("local-passport"),
+// function (req, res) {
+//   res.sendFile(path.join(__dirname, "../views", "artistpage.html"));
+//   });
 // ================
 // Serve Login Page
 // ================
