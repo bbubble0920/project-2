@@ -3,11 +3,11 @@
     "username": "root",
     "password": "password",
     "database": "wearItWell",
-    "host": "localhost",
+    "host": "localhost1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
+    "username": "root2",
     "password": "password",
     "database": "testdb",
     "host": "localhost",
